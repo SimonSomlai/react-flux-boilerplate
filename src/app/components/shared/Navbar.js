@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Navbar, Nav, NavItem, Glyphicon} from 'react-bootstrap';
 import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap';
 import {Link} from "react-router"
+
 class NavbarTop extends Component {
   render() {
     return (

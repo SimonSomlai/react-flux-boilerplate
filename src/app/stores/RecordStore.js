@@ -18,20 +18,20 @@ var RecordStore = _.extend({}, EventEmitter.prototype, {
     var index = this.records.findIndex((oldRecord) => oldRecord.id === newRecord.id)
     console.log('changing object!');
     this.records[index] = newRecord
-    console.log(this.getRecordData());
+    console.log(this.getRecords());
   },
   deleteRecord: function(id){
     console.log("deleting record from store with id " + id);
     var oldRecord = this.findRecord(id)
     var index = this.records.findIndex((record) => record === oldRecord)
     this.records.splice(index,1)
-    console.log(this.getRecordData());
+    console.log(this.getRecords());
   },
   setRecords: function(data) {
     this.records = data;
-    console.log(this.getRecordData());
+    console.log(this.getRecords());
   },
-  getRecordData: function() {
+  getRecords: function() {
     return this.records;
   },
   addRecord: function(record) {
